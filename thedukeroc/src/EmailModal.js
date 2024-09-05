@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button, Form } from 'react-bootstrap';
+import { Modal, Button, Form, Alert } from 'react-bootstrap';
 
 const EmailModal = ({ show, handleClose, handleSuccess }) => {
   const [formData, setFormData] = useState({
@@ -10,29 +10,39 @@ const EmailModal = ({ show, handleClose, handleSuccess }) => {
     inquiry: '',
   });
 
+  const [error, setError] = useState(''); // State to manage error messages
 
+  // Handle form field changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setError(''); // Clear error when user starts typing
   };
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
+    // Check if all fields are filled
+    if (!formData.name || !formData.email || !formData.dates || !formData.partySize || !formData.inquiry) {
+      setError('All fields are required. Please fill in all fields before submitting.');
+      return;
+    }
+
     try {
-     
+      // Make a POST request to the send-email API endpoint
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),  
+        body: JSON.stringify(formData),  // Send the form data as JSON
       });
-  
+
       if (response.ok) {
-        
-        handleClose(); 
-        handleSuccess(); 
-        setFormData({  
+        // If the email is successfully sent, close the modal and show the success screen
+        handleClose(); // Close the modal
+        handleSuccess(); // Show success screen
+        setFormData({  // Reset the form data
           name: '',
           email: '',
           dates: '',
@@ -41,14 +51,13 @@ const EmailModal = ({ show, handleClose, handleSuccess }) => {
         });
       } else {
         console.error('Error sending email:', response.statusText);
-        alert('There was an issue sending your inquiry. Please try again.');
+        setError('There was an issue sending your inquiry. Please try again.');
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      alert('There was an error sending your inquiry. Please check your connection and try again.');
+      setError('There was an error sending your inquiry. Please check your connection and try again.');
     }
   };
-  
 
   return (
     <Modal show={show} onHide={handleClose}>
@@ -56,6 +65,8 @@ const EmailModal = ({ show, handleClose, handleSuccess }) => {
         <Modal.Title>Send an Inquiry</Modal.Title>
       </Modal.Header>
       <Modal.Body>
+        {/* Display error message if there is one */}
+        {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="formName">
             <Form.Label>Name:</Form.Label>
@@ -131,4 +142,5 @@ const EmailModal = ({ show, handleClose, handleSuccess }) => {
 };
 
 export default EmailModal;
+
 

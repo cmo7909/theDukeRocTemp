@@ -1,0 +1,14 @@
+.modal-header-centered {
+    display: flex; /* Make the header a flex container */
+    justify-content: center; /* Center all content horizontally */
+    position: relative; /* Position relative for absolute positioning */
+    width: 100%; /* Full width to center content properly */
+  }
+  
+  .modal-title-centered {
+    margin: 0 auto; /* Center the title by margin auto */
+    position: absolute; /* Position absolute to avoid flex interference */
+    left: 50%; /* Start in the middle horizontally */
+    transform: translateX(-50%); /* Shift back by 50% to center */
+    text-align: center; /* Ensure text is centered */
+  }

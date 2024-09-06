@@ -26,7 +26,7 @@ export default async function handler(req, res) {
     let mailOptions = {
       from: process.env.EMAIL,  // Ensure it's the sender email
       to: process.env.EMAIL, // Your desired receiving email
-      subject: `New Inquiry from ${name}`,
+      subject: `TheDuke inquiry from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nDate: ${dates}\nParty Size: ${partySize}\nInquiry: ${inquiry}`,
     };
 

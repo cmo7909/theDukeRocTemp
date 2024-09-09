@@ -15,10 +15,21 @@
   padding: 3%;
 }
 
+.event-space {
+  display: flex; /* Use flexbox for better control */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  width: 90%; /* Default width for small screens */
+  max-width: 600px; /* Maximum width to prevent stretching on large screens */
+  min-width: 300px; /* Minimum width to prevent shrinking too much on small screens */
+  margin: 20px auto; /* Center and add some margin */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
 .event-space img {
-  width: 100%; /* Take full width within its container */
-  height: auto;
-  border: 5px solid #a8842c;
+  width: 100%; /* Make the image take full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  border: 5px solid #a8842c; /* Keep existing border */
 }
 
 .about {
@@ -26,7 +37,9 @@
   flex-direction: column; /* Arrange children in a column */
   justify-content: flex-start; /* Start content at the top */
   align-items: center; /* Center all content horizontally */
-  width: 20%; /* Keep the existing width */
+  width: 90%; /* Default width for small screens */
+  max-width: 600px; /* Maximum width to prevent stretching on large screens */
+  min-width: 300px; /* Minimum width to prevent too much shrinkage on small screens */
   height: auto; /* Keep height auto */
   border: 5px solid #a8842c; /* Keep existing border */
   background-color: #343838; /* Keep existing background color */
@@ -35,6 +48,8 @@
   line-height: 200%; /* Keep existing line height */
   font-family: 'AcuminPro', sans-serif; /* Keep existing font family */
   text-align: center; /* Center text content */
+  margin: 20px auto; /* Add margin for spacing */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
 .about p {
@@ -100,4 +115,5 @@
     width: 70%; /* Slightly closer together */
   }
 }
+
 

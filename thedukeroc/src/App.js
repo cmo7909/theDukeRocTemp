@@ -31,7 +31,9 @@ function App() {
         <Row>
           <Col sm={12} md={6} className="d-flex justify-content-end">
             <div className='about'>
-              <p className='text'>The Duke is a newly renovated event space inside of the Historic Sibley Square. Located at 240 E. Main Street, The Duke is centrally located in the heart of Rochester's Center City. A cultural hub of food, arts, and entertainment The Duke offers modern amenities that provide a one of a kind event experience.</p>
+              <p className='text'>The Duke offers modern amenities that provide a one of a kind event experience. Inspired by the raw music lifestyle of New York City of the 20th century, The Duke features a custom leather fringe chandelier, lighting and art accents throughout, and a tiled concert stage that looks out over East Main St. and Parcel 5. </p>
+              <p className='text'>The Duke offers a curated guest experience based on decades of experience. When you book The Duke, you will be guaranteed an individually exclusive experience of food, wine, and cocktails, while immersing yourself in the creative culture of art and music of New York City.
+Food and beverage is managed by the hospitality team that owns and manages Avvino, La Bola, and Frenchman Street.</p>
               <Button variant="secondary" onClick={handleShow}>Send an Inquiry</Button>
             </div>
           </Col>

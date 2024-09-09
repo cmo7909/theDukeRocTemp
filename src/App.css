@@ -9,20 +9,31 @@
   text-align: center;
 }
 
-.logo img {
-  width: 15%;
-  height: auto;
-  padding: 3%;
+.logo {
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%; /* Take full width of container */
+  margin: 20px auto; /* Center and add some margin */
+  box-sizing: border-box; /* Include padding and border in width */
 }
 
+.logo img {
+  width: 15%; /* Larger size for smaller screens */
+  height: auto; /* Maintain aspect ratio */
+  padding: 3%; /* Keep padding */
+}
+
+/* Updated Event Space styling to match Google Maps size */
 .event-space {
   display: flex; /* Use flexbox for better control */
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
-  width: 90%; /* Default width for small screens */
-  max-width: 600px; /* Maximum width to prevent stretching on large screens */
-  min-width: 300px; /* Minimum width to prevent shrinking too much on small screens */
-  margin: 20px auto; /* Center and add some margin */
+  width: 100%; /* Full width within parent */
+  max-width: 600px; /* Maximum width to prevent stretching too wide */
+  min-width: 300px; /* Minimum width to prevent it from becoming too narrow */
+  margin: 20px auto; /* Center the container and add some margin */
+  padding: 10px; /* Add padding around the image */
   box-sizing: border-box; /* Include padding and border in width */
 }
 
@@ -30,6 +41,27 @@
   width: 100%; /* Make the image take full width of its container */
   height: auto; /* Maintain aspect ratio */
   border: 5px solid #a8842c; /* Keep existing border */
+}
+
+/* Wrapper for Google Maps */
+.google-maps-wrapper {
+  display: flex; /* Flexbox to control alignment */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center content vertically */
+  width: 100%; /* Full width */
+  margin: 20px auto; /* Center the container and add margin */
+  padding: 10px; /* Add padding around the Google Maps element */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Google Maps container */
+.google-maps {
+  width: 100%; /* Full width */
+  max-width: 600px; /* Prevents from becoming too wide */
+  min-width: 300px; /* Prevents it from becoming too narrow */
+  margin: 0 auto; /* Center and add margin */
+  box-sizing: border-box; /* Include padding and border in width */
+  padding: 0; /* Ensure no padding affects centering */
 }
 
 .about {
@@ -63,11 +95,6 @@
   align-self: center; /* Center button horizontally */
 }
 
-.google-maps {
-  width: 100%; /* Ensure full width within its container */
-  padding: 2%;
-}
-
 .text {
   color: white; 
 }
@@ -95,7 +122,7 @@
   }
 
   .event-space,
-  .google-maps {
+  .google-maps-wrapper {
     flex: 1; /* Ensure both columns take equal space */
     max-width: 40%; /* Restrict width to keep elements closer */
   }
@@ -104,7 +131,7 @@
     justify-content: flex-end; /* Push the event space towards the end of its flex container */
   }
 
-  .google-maps {
+  .google-maps-wrapper {
     justify-content: flex-start; /* Push the google maps towards the start of its flex container */
   }
 }
@@ -115,5 +142,9 @@
     width: 70%; /* Slightly closer together */
   }
 }
+
+
+
+
 
 

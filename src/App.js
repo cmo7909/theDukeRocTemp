@@ -55,18 +55,20 @@ Food and beverage is managed by the hospitality team that owns and manages Avvin
       </div>
 
       <Row className="d-flex justify-content-center align-items-center">
-       
-        <Col sm={12} md={6} className="d-flex justify-content-center">
-            <div className='event-space text-center'>
-              <img src={require("./EventSpaceSim.jpg")} alt='theDuke eventspace'></img>
-            </div>
-        </Col>
-        <Col xs={12} md={6} className="d-flex justify-content-center">
-          <div className='google-maps'>
-            <Map />
-          </div>
-        </Col>
-      </Row>
+  <Col sm={12} md={6} className="d-flex justify-content-center">
+    <div className="event-space text-center">
+      <img src={require("./EventSpaceSim.jpg")} alt="theDuke eventspace" />
+    </div>
+  </Col>
+  <Col xs={12} md={6} className="d-flex justify-content-center">
+    <div className="google-maps-wrapper">
+      <div className="google-maps">
+        <Map />
+      </div>
+    </div>
+  </Col>
+</Row>
+
     </div>
   );
 }

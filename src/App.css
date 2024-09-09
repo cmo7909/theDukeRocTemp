@@ -9,14 +9,14 @@
   text-align: center;
 }
 
-.logo img{
+.logo img {
   width: 15%;
   height: auto;
   padding: 3%;
 }
 
 .event-space img {
-  width: 60%;
+  width: 40em; /* Take full width within its container */
   height: auto;
   border: 5px solid #a8842c;
 }
@@ -26,7 +26,7 @@
   flex-direction: column; /* Arrange children in a column */
   justify-content: flex-start; /* Start content at the top */
   align-items: center; /* Center all content horizontally */
-  width: 50%; /* Keep the existing width */
+  width: 30em; /* Keep the existing width */
   height: auto; /* Keep height auto */
   border: 5px solid #a8842c; /* Keep existing border */
   background-color: #343838; /* Keep existing background color */
@@ -49,9 +49,55 @@
 }
 
 .google-maps {
+  width: 100%; /* Ensure full width within its container */
   padding: 2%;
 }
 
 .text {
   color: white; 
 }
+
+/* Main container for event-space and google-maps */
+.d-flex-centered {
+  display: flex;
+  flex-direction: column; /* Stack vertically by default for small screens */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 20px; /* Space between elements */
+  margin-top: 20px; /* Adjust margin as needed */
+  width: 100%; /* Take full width */
+}
+
+/* Adjust for medium and large screens */
+@media (min-width: 768px) { /* For md and lg screens */
+  .d-flex-centered {
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: center; /* Center content */
+    align-items: center; /* Align items to the center vertically */
+    gap: 20px; /* Small gap between elements */
+    width: 80%; /* Reduce width for alignment near the center */
+    margin: 0 auto; /* Center the container */
+  }
+
+  .event-space,
+  .google-maps {
+    flex: 1; /* Ensure both columns take equal space */
+    max-width: 40%; /* Restrict width to keep elements closer */
+  }
+
+  .event-space {
+    justify-content: flex-end; /* Push the event space towards the end of its flex container */
+  }
+
+  .google-maps {
+    justify-content: flex-start; /* Push the google maps towards the start of its flex container */
+  }
+}
+
+/* Center them completely on extra-large screens for better appearance */
+@media (min-width: 992px) {
+  .d-flex-centered {
+    width: 70%; /* Slightly closer together */
+  }
+}
+

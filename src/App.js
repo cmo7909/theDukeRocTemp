@@ -29,7 +29,7 @@ function App() {
       </Row>
       <div>
         <Row>
-          <Col sm={12} md={6} className="d-flex justify-content-end">
+          <Col sm={12} md={12} lg={12} className="d-flex justify-content-center">
             <div className='about'>
               <p className='text'>The Duke offers modern amenities that provide a one of a kind event experience. Inspired by the raw music lifestyle of New York City of the 20th century, The Duke features a custom leather fringe chandelier, lighting and art accents throughout, and a tiled concert stage that looks out over East Main St. and Parcel 5. </p>
               <p className='text'>The Duke offers a curated guest experience based on decades of experience. When you book The Duke, you will be guaranteed an individually exclusive experience of food, wine, and cocktails, while immersing yourself in the creative culture of art and music of New York City.
@@ -37,11 +37,7 @@ Food and beverage is managed by the hospitality team that owns and manages Avvin
               <Button variant="secondary" onClick={handleShow}>Send an Inquiry</Button>
             </div>
           </Col>
-          <Col sm={12} md={6} className="d-flex justify-content-start">
-            <div className='event-space text-start'>
-              <img src={require("./EventSpaceSim.jpg")} alt='theDuke eventspace'></img>
-            </div>
-          </Col>
+          
         </Row>
 
         {/* Email Modal */}
@@ -59,7 +55,13 @@ Food and beverage is managed by the hospitality team that owns and manages Avvin
       </div>
 
       <Row className="d-flex justify-content-center align-items-center">
-        <Col xs={12} md={8} className="d-flex justify-content-center">
+       
+        <Col sm={12} md={6} className="d-flex justify-content-center">
+            <div className='event-space text-center'>
+              <img src={require("./EventSpaceSim.jpg")} alt='theDuke eventspace'></img>
+            </div>
+        </Col>
+        <Col xs={12} md={6} className="d-flex justify-content-center">
           <div className='google-maps'>
             <Map />
           </div>

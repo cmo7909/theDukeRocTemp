@@ -16,7 +16,7 @@
 }
 
 .event-space img {
-  width: 40em; /* Take full width within its container */
+  width: 100%; /* Take full width within its container */
   height: auto;
   border: 5px solid #a8842c;
 }
@@ -26,7 +26,7 @@
   flex-direction: column; /* Arrange children in a column */
   justify-content: flex-start; /* Start content at the top */
   align-items: center; /* Center all content horizontally */
-  width: 30em; /* Keep the existing width */
+  width: 20%; /* Keep the existing width */
   height: auto; /* Keep height auto */
   border: 5px solid #a8842c; /* Keep existing border */
   background-color: #343838; /* Keep existing background color */

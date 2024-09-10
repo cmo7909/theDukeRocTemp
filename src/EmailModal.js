@@ -5,6 +5,7 @@ const EmailModal = ({ show, handleClose, handleSuccess }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    number: '',
     dates: '',
     partySize: '',
     inquiry: '',
@@ -23,7 +24,7 @@ const EmailModal = ({ show, handleClose, handleSuccess }) => {
     e.preventDefault();
 
     // Check if all fields are filled
-    if (!formData.name || !formData.email || !formData.dates || !formData.partySize || !formData.inquiry) {
+    if (!formData.name || !formData.email || !formData.number || !formData.dates || !formData.partySize || !formData.inquiry) {
       setError('All fields are required. Please fill in all fields before submitting.');
       return;
     }
@@ -92,8 +93,20 @@ const EmailModal = ({ show, handleClose, handleSuccess }) => {
             />
           </Form.Group>
 
+          <Form.Group controlId="formNumber">
+            <Form.Label>Phone number:</Form.Label>
+            <Form.Control
+              type="text"
+              name="number"
+              value={formData.number}
+              placeholder="Enter your phone number"
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
           <Form.Group controlId="formDate">
-            <Form.Label>Date of Inquiry:</Form.Label>
+            <Form.Label>Date of event(s):</Form.Label>
             <Form.Control
               type="text"
               name="dates"
@@ -105,7 +118,7 @@ const EmailModal = ({ show, handleClose, handleSuccess }) => {
           </Form.Group>
 
           <Form.Group controlId="formPartySize">
-            <Form.Label>Party Size:</Form.Label>
+            <Form.Label>Party size:</Form.Label>
             <Form.Control
               type="text"
               name="partySize"

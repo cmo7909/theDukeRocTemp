@@ -7,7 +7,7 @@ dotenv.config();
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { name, email, inquiry, dates, partySize } = req.body;
+    const { name, email, number, inquiry, dates, partySize } = req.body;
 
     // Debug: Check if environment variables are loaded
     console.log('Sending from:', process.env.EMAIL);
@@ -27,7 +27,7 @@ export default async function handler(req, res) {
       from: process.env.EMAIL,  // Ensure it's the sender email
       to: process.env.EMAIL, // Your desired receiving email
       subject: `TheDuke inquiry from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nDate: ${dates}\nParty Size: ${partySize}\nInquiry: ${inquiry}`,
+      text: `Name: ${name}\nEmail: ${email}\nPhone number: ${number}\nDate: ${dates}\nParty Size: ${partySize}\nInquiry: ${inquiry}`,
     };
 
     try {

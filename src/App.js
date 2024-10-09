@@ -31,7 +31,7 @@ function App() {
         <Row>
           <Col sm={12} md={12} lg={12} className="d-flex justify-content-center">
             <div className='about'>
-              <p className='text'>The Duke offers modern amenities in a unique and historic location in downtown Rochester, NY. The Aesthetic is inspired by the raw music lifestyle of New York City in the late 20 th century. The Duke features a custom leather fringe chandelier, bold lighting and art accents throughout, and a tiled concert stage that looks out over East Main Street and Parcel 5. </p>
+              <p className='text'>The Duke offers modern amenities in a unique and historic location in downtown Rochester, NY. The Aesthetic is inspired by the raw music lifestyle of New York City in the late 20th century. The Duke features a custom leather fringe chandelier, bold lighting and art accents throughout, and a tiled concert stage that looks out over East Main Street and Parcel 5. </p>
               <p className='text'>The Duke offers a curated guest experience enhanced by decades of hospitality and event expertise from the team that owns Avvino, La Bola &amp; Frenchman Street. When you book The Duke, you will be guaranteed an exclusive experience of food, wine, and cocktails, while immersing yourself in a creative one-of-a-kind venue.</p>
               <Button variant="secondary" onClick={handleShow}>Send an Inquiry</Button>
             </div>
@@ -56,7 +56,7 @@ function App() {
       <Row className="d-flex justify-content-center align-items-center">
       <Row>
     <div className="event-space text-center">
-      <img src={require("./tempPhoto.jpg")} alt="theDuke eventspace" />
+      <img src={require("./tempPhotoNew.jpg")} alt="theDuke eventspace" />
     </div>
     </Row>
  

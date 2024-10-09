@@ -24,16 +24,15 @@ function App() {
     <div className="App">
       <Row>
         <div className="logo">
-          <img src={require("./TheDukeLogo_Decal.png")} alt="theDuke Logo"></img>
+          <img src={require("./TheDukeGold.png")} alt="theDuke Logo"></img>
         </div>
       </Row>
       <div>
         <Row>
           <Col sm={12} md={12} lg={12} className="d-flex justify-content-center">
             <div className='about'>
-              <p className='text'>The Duke offers modern amenities that provide a one of a kind event experience. Inspired by the raw music lifestyle of New York City of the 20th century, The Duke features a custom leather fringe chandelier, lighting and art accents throughout, and a tiled concert stage that looks out over East Main St. and Parcel 5. </p>
-              <p className='text'>The Duke offers a curated guest experience based on decades of experience. When you book The Duke, you will be guaranteed an individually exclusive experience of food, wine, and cocktails, while immersing yourself in the creative culture of art and music of New York City.
-Food and beverage is managed by the hospitality team that owns and manages Avvino, La Bola, and Frenchman Street.</p>
+              <p className='text'>The Duke offers modern amenities in a unique and historic location in downtown Rochester, NY. The Aesthetic is inspired by the raw music lifestyle of New York City in the late 20 th century. The Duke features a custom leather fringe chandelier, bold lighting and art accents throughout, and a tiled concert stage that looks out over East Main Street and Parcel 5. </p>
+              <p className='text'>The Duke offers a curated guest experience enhanced by decades of hospitality and event expertise from the team that owns Avvino, La Bola &amp; Frenchman Street. When you book The Duke, you will be guaranteed an exclusive experience of food, wine, and cocktails, while immersing yourself in a creative one-of-a-kind venue.</p>
               <Button variant="secondary" onClick={handleShow}>Send an Inquiry</Button>
             </div>
           </Col>
@@ -55,18 +54,20 @@ Food and beverage is managed by the hospitality team that owns and manages Avvin
       </div>
 
       <Row className="d-flex justify-content-center align-items-center">
-  <Col sm={12} md={6} className="d-flex justify-content-center">
+      <Row>
     <div className="event-space text-center">
-      <img src={require("./EventSpaceSim.jpg")} alt="theDuke eventspace" />
+      <img src={require("./tempPhoto.jpg")} alt="theDuke eventspace" />
     </div>
-  </Col>
-  <Col xs={12} md={6} className="d-flex justify-content-center">
+    </Row>
+ 
+    <Row>
     <div className="google-maps-wrapper">
       <div className="google-maps">
         <Map />
       </div>
     </div>
-  </Col>
+    </Row>
+  
 </Row>
 
     </div>

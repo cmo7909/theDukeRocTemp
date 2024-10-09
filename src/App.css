@@ -9,6 +9,18 @@
   text-align: center;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background-color: #0D0D0D;
+  background-image: url('./Images/TheDukeDesktopBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .logo {
   display: flex; /* Flexbox for alignment */
   justify-content: center; /* Center horizontally */
@@ -19,14 +31,13 @@
 }
 
 .logo img {
-  width: 15%; /* Larger size for smaller screens */
+  width: 20vw; /* Larger size for smaller screens */
   height: auto; /* Maintain aspect ratio */
-  padding: 3%; /* Keep padding */
+  padding: 2%; /* Keep padding */
 }
 
 /* Updated Event Space styling to match Google Maps size */
 .event-space {
-  display: flex; /* Use flexbox for better control */
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
   width: 100%; /* Full width within parent */
@@ -38,7 +49,7 @@
 }
 
 .event-space img {
-  width: 100%; /* Make the image take full width of its container */
+  width: 50vw; /* Make the image take full width of its container */
   height: auto; /* Maintain aspect ratio */
   border: 5px solid #a8842c; /* Keep existing border */
 }
@@ -111,37 +122,33 @@
 }
 
 /* Adjust for medium and large screens */
-@media (min-width: 768px) { /* For md and lg screens */
-  .d-flex-centered {
-    flex-direction: row; /* Arrange items in a row */
-    justify-content: center; /* Center content */
-    align-items: center; /* Align items to the center vertically */
-    gap: 20px; /* Small gap between elements */
-    width: 80%; /* Reduce width for alignment near the center */
-    margin: 0 auto; /* Center the container */
+@media (max-width: 768px) { /* For md and lg screens */
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: #0D0D0D;
+    background-image: url('./Images/TheDukeMobileBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
-  .event-space,
-  .google-maps-wrapper {
-    flex: 1; /* Ensure both columns take equal space */
-    max-width: 40%; /* Restrict width to keep elements closer */
+  .event-space img {
+    width: 90vw; /* Make the image take full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border: 5px solid #a8842c; /* Keep existing border */
   }
 
-  .event-space {
-    justify-content: flex-end; /* Push the event space towards the end of its flex container */
-  }
-
-  .google-maps-wrapper {
-    justify-content: flex-start; /* Push the google maps towards the start of its flex container */
+  .logo img {
+    width: 60vw; /* Larger size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    padding: 2%; /* Keep padding */
   }
 }
 
-/* Center them completely on extra-large screens for better appearance */
-@media (min-width: 992px) {
-  .d-flex-centered {
-    width: 70%; /* Slightly closer together */
-  }
-}
 
 
 
